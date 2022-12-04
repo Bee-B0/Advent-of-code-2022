@@ -10,14 +10,14 @@ lcl=[0] #largest calories list
 tcl=[0] #temporary calories lsit
 
 
-for i in range(len(cal)):
-  if cal[i] != "\n": #checks if it isn't a blank space
-    tcl.append(int(cal[i])) #  we have to turn that sting into an int so we can sum it later on.
+for i in cal:
+  if i != "\n": #checks if it isn't a blank space
+    tcl.append(int(i)) #  we have to turn that sting into an int so we can sum it later on.
 
   else: # the \n (blank line) denotes the end of one group and the start of the next. 
     if sum(tcl)>sum(lcl): # checking if this group's total was greater than the last groups total
       lcl=tcl # if it is then we need to make the largest one this one. 
-    tcl=[] #empties the box for the next iteration. 
+    tcl.clear() #empties the box for the next iteration. 
     
-  Sum = sum(lcl)
-print(Sum) 
+
+print(sum(lcl) 

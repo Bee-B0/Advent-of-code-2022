@@ -1,6 +1,6 @@
 #Day 1 part 1 https://adventofcode.com/2022/day/1
-
-cal = ("calories.txt").readlines()
+with open("calories.txt", 'r') as f:
+    cal = f.readlines()
 ## The list is split up into strings
 #['7896\n','4992\n',etc]
 #This creates a problem that they are not int

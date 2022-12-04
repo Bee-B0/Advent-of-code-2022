@@ -3,6 +3,8 @@
 
 list=[]
 dict1 = {**{chr(i+96):i for i in range(1,27)},**{chr(i+64):i+26 for i in range(1,27)}}
+# ** unpacks dictionaries, used for merging dictionaries
+
 
 stringlist=open("strings.txt").readlines() # a list
 

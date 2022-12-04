@@ -10,9 +10,9 @@ stringlist=open("strings.txt").readlines() # a list
 
 def getnum(string): #going to split the list in half and tell me the values( from the dictionary) of the common letter in the two halves
   string1, string2 = string[:len(string)//2], string[len(string)//2:]
-  n=""
+  n="" #n is the shared letter.
   for char in string1:
-    if char in string2 and char not in n:
+    if char in string2 and char not in n: # not in n makes sure it isn't repeated.
       n+=char 
   
   #print(dict1[n])
@@ -22,8 +22,8 @@ for i in range(len(stringlist)): # going to run get num for all of the strings.
   list.append(getnum(stringlist[i]))
 
   
-  Sum = sum(list)
-print(Sum) #final answer
+  total = sum(list)
+print(total) #final answer
   
 
   
